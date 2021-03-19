@@ -8,6 +8,9 @@ def drawPoints(X, Y, minX, maxX, minY, maxY):
     rectY = [minY, maxY, maxY, minY, minY]
     plt.grid(True, which='both')
     plt.plot(rectX, rectY, 'r')
+    x = X.copy() + [X[0]]
+    y = Y.copy() + [Y[0]]
+    plt.plot(x, y, 'y')
     plt.show()
 
 
